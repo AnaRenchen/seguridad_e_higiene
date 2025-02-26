@@ -79,7 +79,7 @@ h1, h2, h3 {
 }
 
 .quien-soy-titulo{
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 15px;
   text-align:center;
 }
@@ -268,7 +268,7 @@ transform: rotateY(180deg);
   }
 
   .quien-soy{
-    padding: 100px 40px 150px; 
+    padding: 100px 30px 150px; 
   }
 }
 
@@ -277,6 +277,6 @@ transform: rotateY(180deg);
   font-size: 20px;
   }
   .quien-soy{
-    padding: 100px 40px 150px; 
+    padding: 100px 30px 150px; 
   }
 }
