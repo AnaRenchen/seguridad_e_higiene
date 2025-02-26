@@ -12,6 +12,10 @@ h1, h2, h3 {
   margin: 0px;
 }
 
+.navbar{
+  background-color: #ffffff!important;
+}
+
 header .navbar .navbar-nav {
   margin-left: auto;
 }
@@ -21,23 +25,17 @@ header .navbar .navbar-nav {
   height: auto; 
 }
 
-.container-nav {
-    display: flex;
-    justify-content: space-between; /* Distribuye el botón y los enlaces */
-    align-items: center; /* Alinea verticalmente el contenido */
-    background-color: #556B2F !important;
-    padding: 0 1rem; /* Ajusta los márgenes laterales */
-  }
 
 .nav-link {
   color:#575757 !important;
   font-family: 'Roboto', sans-serif !important;
+  font-weight: bold!important;
   font-size: 1.1rem!important;
   margin: 0.6rem;
 }
 
 header .navbar .navbar-nav .nav-link:hover {
-  color: #132b69!important;
+  color: #24248f!important;
 }
 
 .navbar-toggler{
@@ -132,7 +130,6 @@ header .navbar .navbar-nav .nav-link:hover {
 }
 
 .titulos-slide h3 {
-
  font-size: 35px;
  word-break: break-word;
 }
@@ -238,6 +235,17 @@ header .navbar .navbar-nav .nav-link:hover {
       margin-bottom: 10px;
     }
 
+    .ubicacion-container {
+      display: flex; /* Activa Flexbox */
+   
+    }
+    
+    .ubicacion-container i {
+      margin-right: 12px; 
+      font-size: 1.3em; 
+      color: white; 
+    }
+
     .button{
       height: 25px; 
       text-align: center;  
@@ -264,6 +272,7 @@ header .navbar .navbar-nav .nav-link:hover {
     border: 0;
     width: 100%;
     height: 100px;
+    padding:5px
     }
     
 
