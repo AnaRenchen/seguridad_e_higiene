@@ -5,13 +5,12 @@
 }
 
 
+
 body {
   font-family: 'Roboto', sans-serif !important;
+
 }
 
-h1, h2, h3 {
-  margin: 0px;
-}
 
 .navbar{
   background-color: #ffffff!important;
@@ -169,11 +168,11 @@ header .navbar .navbar-nav .nav-link:hover {
 }
 
 
-.slider-container {
-  box-sizing: border-box;
-  display: block;
-  padding: 0 50px;
+.contenedor, .slider-container {
+  max-width: 100%;
+  overflow: hidden;
 }
+
 
 .slick-slide {
   height: initial !important;
@@ -289,6 +288,15 @@ header .navbar .navbar-nav .nav-link:hover {
 .izquierda{
 transform: rotateY(180deg);
 }
+
+.arrow-down, .arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 50% solid transparent;
+  border-right: 50% solid transparent;
+  border-bottom: 40px solid rgb(255, 255, 255);
+}
+
 
 .arrow-down {
   width: 0; 
