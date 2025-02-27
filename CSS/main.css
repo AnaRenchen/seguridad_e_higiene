@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Roboto', sans-serif !important;
 }
@@ -74,6 +75,7 @@ header .navbar .navbar-nav .nav-link:hover {
   text-align: center;
   flex-basis:100%;
   font-size: 5rem;
+  font-family: "Michroma", serif;
 }
 
 .titulo-secundario {
