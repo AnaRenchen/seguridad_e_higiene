@@ -149,8 +149,8 @@ header .navbar .navbar-nav .nav-link:hover {
   align-items: center;
   width: 50px; /* Tamaño del botón */
   height: 50px; /* Tamaño del botón */
-  background-color: white; /* Color oficial de WhatsApp */
-  border-radius: 50%; /* Hace que sea un botón circular */
+  background-color: white; 
+  border-radius: 50%; 
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -162,7 +162,7 @@ header .navbar .navbar-nav .nav-link:hover {
 .logo-whatsapp {
   width: 30px;
   height: 30px;
-  fill: #25D366; /* Color blanco para el logo */
+  fill: #25D366; 
 }
 
 
@@ -314,6 +314,14 @@ transform: rotateY(180deg);
     padding: 100px 30px 150px; 
   }
 
+  .titulo-secundario{
+    font-size: 1.8rem;
+  }
+
+  .titulo-secundario2{
+    font-size:1.6rem;
+  }
+
  
 }
 
@@ -327,8 +335,12 @@ transform: rotateY(180deg);
     font-size:3rem;
   }
 
+  .titulo-secundario{
+    font-size:1.6rem;
+  }
+
   .titulo-secundario2{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .logo-empresa{
