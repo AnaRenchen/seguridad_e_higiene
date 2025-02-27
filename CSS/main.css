@@ -112,6 +112,7 @@ header .navbar .navbar-nav .nav-link:hover {
   font-size: 1.7rem;
   margin-bottom: 15px;
   text-align:center;
+  font-weight: bold;
 }
 
 .quienesSomos{
@@ -322,6 +323,14 @@ transform: rotateY(180deg);
     font-size:1.6rem;
   }
 
+  .quien-soy-titulo{
+    font-size: 1.5rem;
+  }
+
+  .quienesSomos{
+    font-size: 1rem;
+  }
+
  
 }
 
@@ -341,6 +350,14 @@ transform: rotateY(180deg);
 
   .titulo-secundario2{
     font-size: 1.4rem;
+  }
+
+  .quienesSomos{
+    font-size: 1rem;
+  }
+
+  .quien-soy-titulo{
+    font-size: 1.3rem;
   }
 
   .logo-empresa{
