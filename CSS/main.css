@@ -4,13 +4,9 @@
   box-sizing: border-box;
 }
 
-
-
 body {
   font-family: 'Roboto', sans-serif !important;
-
 }
-
 
 .navbar{
   background-color: #ffffff!important;
@@ -24,7 +20,6 @@ header .navbar .navbar-nav {
   width: 7rem ;  
   height: auto; 
 }
-
 
 .nav-link {
   color:#575757 !important;
@@ -137,17 +132,15 @@ header .navbar .navbar-nav .nav-link:hover {
 }
 
 
-
 .whatsapp_pic{
   width: 3rem;;
-
 }
 
 .boton-whatsapp {
   position: fixed;
-  bottom: 20px; /* Ubicación en la parte inferior */
-  right: 20px; /* Ubicación en la parte derecha */
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; /* Sobre otros elementos */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +149,7 @@ header .navbar .navbar-nav .nav-link:hover {
 }
 
 .boton-whatsapp:hover {
-  opacity: 0.7; /* Efecto al pasar el mouse */
+  opacity: 0.7; 
 }
 
 .logo-whatsapp {
@@ -233,7 +226,7 @@ header .navbar .navbar-nav .nav-link:hover {
     }
 
     .ubicacion-container {
-      display: flex; /* Activa Flexbox */
+      display: flex;
    
     }
     
@@ -243,6 +236,7 @@ header .navbar .navbar-nav .nav-link:hover {
       color: white; 
     }
 
+    /* Formulario */
     .button{
       height: 25px; 
       text-align: center;  
@@ -272,7 +266,7 @@ header .navbar .navbar-nav .nav-link:hover {
     padding:5px
     }
     
-
+  /* Fin formulario */
 .arrow{
 	display: flex;
 	position: absolute;
