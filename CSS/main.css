@@ -203,12 +203,9 @@ header .navbar .navbar-nav .nav-link:hover {
 }
 
 
- footer {
-    background: #00007ddb;
-		color: #ffffff;
-    }
-
     #footer {
+    background: #00007ddb;
+    color: #ffffff;
     display: flex;
     align-items: flex-start;
 		flex-wrap: wrap;
@@ -312,6 +309,21 @@ transform: rotateY(180deg);
   border-left: calc(50vw) solid transparent;
   border-right: 50vw  solid transparent;
   border-bottom: 40px solid  #00007ddb;
+}
+
+.scroll-container {
+  display: none; /* Inicialmente oculto */
+  justify-content: flex-end;
+  padding: 20px;
+  position: fixed;
+  bottom: 60px;
+  right: 5px;
+  z-index: 1000;
+}
+
+.scroll-top {
+  width: 2.5rem;
+
 }
 
 
