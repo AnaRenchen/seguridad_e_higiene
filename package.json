@@ -1,0 +1,40 @@
+{
+  "name": "chst",
+  "version": "1.0.0",
+  "description": "Consultora Higiene y Seguridad CHST",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [],
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/index.js --mode dev",
+    "prod": "node ./src/index.js --mode prod"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "logger": "^0.0.1",
+    "nodemailer": "^6.10.0",
+    "winston": "^3.17.0"
+  }
+}
