@@ -136,9 +136,11 @@ header .navbar .navbar-nav .nav-link:hover {
  word-break: break-word;
 }
 
-.simbolo {
- display: flex;
- align-items: center; 
+
+
+.whatsapp_pic{
+  width: 3rem;;
+
 }
 
 .boton-whatsapp {
@@ -149,10 +151,6 @@ header .navbar .navbar-nav .nav-link:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px; /* Tamaño del botón */
-  height: 50px; /* Tamaño del botón */
-  background-color: white; 
-  border-radius: 50%; 
   text-decoration: none;
   transition: 0.3s ease;
 }
