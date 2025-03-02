@@ -1,7 +1,6 @@
 const sendForm = async (e) => {
     e.preventDefault();
   
-    console.log("hacer fetch...");
     let formData = new FormData(document.getElementById("form-contacto"));
     let nombre = formData.get("nombre");
     let email = formData.get("email");
@@ -10,8 +9,9 @@ const sendForm = async (e) => {
     if (!nombre|| !email || !mensaje) {
       Swal.fire({
         icon: "error",
-        background: "white",
-        text: "Es necesario completar todos los campos.",
+        background: "#f4f4f4",
+        text: "Por favor, complete todos los campos.",
+        color:"black",
         confirmButtonText: "OK",
         confirmButtonColor: "#575757",
         toast: true,
@@ -29,7 +29,8 @@ const sendForm = async (e) => {
         Swal.fire({
           text: "Enviando su mensaje...",
           icon: "info",
-          background: "#e5e5e5",
+          background: "#f4f4f4",
+          color:"black",
           showConfirmButton: false,
           allowEscapeKey: false,
           toast: true,
@@ -39,7 +40,7 @@ const sendForm = async (e) => {
         });
   
     let response = await fetch("/api/formulario", {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -47,29 +48,39 @@ const sendForm = async (e) => {
     });
   
     let data = await response.json();
-    console.log(data);
     if (response.ok) {
         Swal.fire({
             icon: "success",
-            background: "white",
+            background: "#f4f4f4",
+            color:"black",
             text: data.message,
             confirmButtonText: "OK",
             confirmButtonColor: "#575757",
             toast: true,
           });
+          // Limpiar formulario después de envío exitoso
+      document.getElementById("form-contacto").reset();
     } else {
       Swal.fire({
         icon: "error",
-        background: "white",
-        text:
-          data.error ||
-          "No fue posible enviar su mensaje.",
+        background: "#f4f4f4",
+        color:"black",
+        text: data.error || "No fue posible enviar su mensaje.",
         confirmButtonText: "OK",
         confirmButtonColor: "#575757",
         toast: true,
       });
     }
-} catch (error) {
+  } catch (error) {
     console.error("Error al enviar mensaje:", error);
+    Swal.fire({
+      icon: "error",
+      background: "#f4f4f4",
+      color:"black",
+      text: "Error inesperado. Intente nuevamente.",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#575757",
+      toast: true,
+    });
   }
-}
+};

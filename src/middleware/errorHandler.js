@@ -32,7 +32,7 @@ export const errorHandler = (error, req, res, next) => {
 
     case TYPES_ERROR.TOO_MANY_REQUESTS:
        res.setHeader("Content-Type", "application/json");
-       return res.status(401).json({ error: "Too many requests." });
+       return res.status(429).json({ error: "Too many requests." });
 
     case TYPES_ERROR.INTERNAL_SERVER_ERROR:
       res.setHeader("Content-Type", "application/json");

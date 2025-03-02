@@ -7,27 +7,28 @@ export class formularioController{
 
             const {nombre, email, mensaje} = req.body;
 
-            // 1. Validación de campos obligatorios
-  if (!nombre || !email || !mensaje) {
-    return res.status(400).json({ error: "Todos los campos son obligatorios" });
-  }
+            //Validación de campos obligatorios
+           if (!nombre || !email || !mensaje) {
+           return res.status(400).json({ error: "Por favor, complete todos los campos." });
+          }
 
-  // 2. Validación de formato de email
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return res.status(400).json({ error: "El email no es válido" });
-  }
+       //Validación de formato de email
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       if (!emailRegex.test(email)) {
+       return res.status(400).json({ error: "Por favor, ingrese un email válido." });
+     }
 
-    // 3. Sanitización básica (prevención XSS)
+    //Sanitización básica (prevención XSS)
     const sanitizeInput = (input) => input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     const sanitizedMessage = sanitizeInput(mensaje);
 
-      // 5. Evitar spam (simulación de rate limiting básico)
+      //Evitar spam (simulación de rate limiting básico)
   if (global.lastSubmissionTime && Date.now() - global.lastSubmissionTime < 10000) { // 10 segundos
-    return res.status(429).json({ error: "Por favor, espera antes de enviar otro mensaje" });
+    return res.status(429).json({ error: "Por favor, espera antes de enviar otro mensaje." });
   }
   global.lastSubmissionTime = Date.now();
 
+  //Se incluye tanto html como text para mayor compatibilidad con los clientes de correo electrónico
             const subject = 'Nuevo mensaje desde el formulario de la web CHST';
             const text = `Nombre: ${nombre}\nEmail: ${email}\nMensaje: ${sanitizedMessage}`;
             const html = `
@@ -145,7 +146,7 @@ export class formularioController{
             await sendEmail(subject, text, html);
           
             res.setHeader("Content-Type", "application/json");
-            return res.status(200).json({ message: "Su mensaje fue enviado correctamente. Nos pondremos en contacto lo antes posible."});
+            return res.status(200).json({ message: "Su mensaje ha sido enviado con éxito. Nos pondremos en contacto a la brevedad."});
 
             
         } catch (error) {

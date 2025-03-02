@@ -1,6 +1,5 @@
 import * as nodemailer from "nodemailer";
 import { config } from "./config.js";
-import __dirname from "../utils/utils.js";
 import { logger } from "../utils/logger.js";
 
 const transporter = nodemailer.createTransport({
@@ -17,13 +16,13 @@ const transporter = nodemailer.createTransport({
     try {
         const email = await transporter.sendMail({
           from: `"CHST web" <${config.USER_GMAIL_NODEMAILER}>`,
-          to: "anamagbh@gmail.com",
+          to: config.RECEIVER_EMAIL,
           subject: subject,
           html: htmlContent,
           text: text,
         });
 
-       logger.info(`Correo enviado a anamagbh@gmail.com con asunto: ${subject}`);
+       logger.info(`Correo enviado a ${config.RECEIVER_EMAIL} con asunto: ${subject}`);
     
         return email;
       } catch (error) {
