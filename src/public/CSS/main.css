@@ -194,7 +194,7 @@ header .navbar .navbar-nav .nav-link:hover {
 }
 
 
-    #footer {
+    #contacto {
     background: #00007ddb;
     color: #ffffff;
     display: flex;
@@ -431,7 +431,7 @@ transform: rotateY(180deg);
     padding: 100px 30px 150px; 
   }
 
-  #footer {
+  #contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
